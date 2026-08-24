@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Simple stylised "ear + soundwave" mark, representing spoken accessibility. -->
+<!--
+  Klarläs mark: a screen/card with lines of text, and sound-wave arcs reading it aloud -
+  representing "clear" (klar) speech read (läs) from whatever app is on screen.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- Card / screen -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,24c-12,0 -22,10 -22,22c0,7 3,11 6,15c2,2.5 3,4 3,7v6c0,3.3 2.7,6 6,6c3.3,0 6,-2.7 6,-6v-1c0,-2.2 1.8,-4 4,-4c2.2,0 4,1.8 4,4v1c0,3.3 2.7,6 6,6c3.3,0 6,-2.7 6,-6v-6c0,-3 1,-4.5 3,-7c3,-4 6,-8 6,-15C82,34 66,24 54,24z" />
+        android:pathData="M30,30 h26 a5,5 0 0 1 5,5 v44 a5,5 0 0 1 -5,5 h-26 a5,5 0 0 1 -5,-5 v-44 a5,5 0 0 1 5,-5 z" />
+    <!-- Lines of text on the card -->
     <path
-        android:fillColor="#F2A900"
-        android:pathData="M40,58c0,-8 6,-14 14,-14c8,0 14,6 14,14"
+        android:fillColor="#1A5CA8"
+        android:pathData="M33,42 h20 a1.6,1.6 0 0 1 0,3.2 h-20 a1.6,1.6 0 0 1 0,-3.2 z" />
+    <path
+        android:fillColor="#1A5CA8"
+        android:pathData="M33,51 h20 a1.6,1.6 0 0 1 0,3.2 h-20 a1.6,1.6 0 0 1 0,-3.2 z" />
+    <path
+        android:fillColor="#1A5CA8"
+        android:pathData="M33,60 h13 a1.6,1.6 0 0 1 0,3.2 h-13 a1.6,1.6 0 0 1 0,-3.2 z" />
+    <!-- Sound-wave arcs, reading the card aloud -->
+    <path
+        android:pathData="M63,44 A8,8 0 0 1 63,60"
         android:strokeColor="#F2A900"
         android:strokeWidth="4"
-        android:strokeLineCap="round" />
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M63,36 A16,16 0 0 1 63,68"
+        android:strokeColor="#F2A900"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M63,28 A24,24 0 0 1 63,76"
+        android:strokeColor="#F2A900"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
 </vector>
