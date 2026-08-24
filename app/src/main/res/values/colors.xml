@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="klarl_primary">#1A5CA8</color>
+    <color name="klarl_primary_dark">#123F73</color>
+    <color name="klarl_accent">#F2A900</color>
+    <color name="klarl_background">#FFFFFF</color>
+    <color name="klarl_on_background">#1A1A1A</color>
+    <color name="klarl_error">#B3261E</color>
+    <color name="klarl_success">#1E7A34</color>
+</resources>

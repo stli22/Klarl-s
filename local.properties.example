@@ -1,0 +1,15 @@
+# Copy this file to "local.properties" (which is gitignored) and fill in real values.
+# local.properties is read by app/build.gradle.kts and never checked into git.
+
+# Path to the Android SDK on your machine.
+sdk.dir=/path/to/Android/sdk
+
+# Claude API key (https://console.anthropic.com/settings/keys).
+# PROTOTYPE ONLY: storing the key on-device and calling api.anthropic.com directly from the
+# app is acceptable for local development. It must NOT be used in a production build — see
+# README.md "Säkerhet och integritet" for the backend-proxy requirement.
+CLAUDE_API_KEY=
+
+# Optional: override the Claude model used for screen summaries / command interpretation.
+# Defaults to claude-opus-5 if omitted.
+CLAUDE_MODEL=claude-opus-5

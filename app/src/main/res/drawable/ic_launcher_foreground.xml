@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Simple stylised "ear + soundwave" mark, representing spoken accessibility. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,24c-12,0 -22,10 -22,22c0,7 3,11 6,15c2,2.5 3,4 3,7v6c0,3.3 2.7,6 6,6c3.3,0 6,-2.7 6,-6v-1c0,-2.2 1.8,-4 4,-4c2.2,0 4,1.8 4,4v1c0,3.3 2.7,6 6,6c3.3,0 6,-2.7 6,-6v-6c0,-3 1,-4.5 3,-7c3,-4 6,-8 6,-15C82,34 66,24 54,24z" />
+    <path
+        android:fillColor="#F2A900"
+        android:pathData="M40,58c0,-8 6,-14 14,-14c8,0 14,6 14,14"
+        android:strokeColor="#F2A900"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+</vector>

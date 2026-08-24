@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Klarl</string>
+    <string name="accessibility_service_label">Klarl skärmguide</string>
+    <string name="accessibility_service_description">Läser upp och sammanfattar skärmar i andra appar med hjälp av AI, och låter dig navigera med röstkommandon. Ett komplement till TalkBack, inte en ersättning.</string>
+
+    <!-- MainActivity / status screen -->
+    <string name="status_title">Klarl – status</string>
+    <string name="status_service_enabled">Tillgänglighetstjänsten är aktiverad</string>
+    <string name="status_service_disabled">Tillgänglighetstjänsten är inte aktiverad</string>
+    <string name="status_service_explanation">Klarl behöver aktiveras som tillgänglighetstjänst för att kunna läsa skärminnehåll i andra appar.</string>
+    <string name="action_open_accessibility_settings">Öppna tillgänglighetsinställningar</string>
+    <string name="status_mic_permission_granted">Mikrofonbehörighet beviljad</string>
+    <string name="status_mic_permission_missing">Mikrofonbehörighet saknas</string>
+    <string name="action_request_mic_permission">Ge mikrofonbehörighet</string>
+    <string name="status_api_key_missing">Ingen Claude API-nyckel hittades. Lägg till CLAUDE_API_KEY i local.properties och bygg om appen.</string>
+    <string name="status_api_key_present">Claude API-nyckel konfigurerad</string>
+    <string name="status_mic_indicator_label">Mikrofonen lyssnar…</string>
+    <string name="settings_section_title">Inställningar</string>
+    <string name="setting_read_aloud_ai_response">Läs upp AI-sammanfattningar automatiskt</string>
+    <string name="setting_require_confirmation">Kräv muntlig bekräftelse för känsliga åtgärder</string>
+
+    <!-- Spoken / TTS templates (also used as fallbacks if the API call fails) -->
+    <string name="tts_command_not_understood">Jag förstod inte kommandot. Försök igen, eller säg \"läs mer\" eller \"gå tillbaka\".</string>
+    <string name="tts_ai_unavailable">Kunde inte nå AI-tjänsten just nu. Försök igen om en stund.</string>
+    <string name="tts_confirm_prompt_prefix">Är du säker på att du vill %1$s? Säg ja för att bekräfta, eller nej för att avbryta.</string>
+    <string name="tts_confirmed_action">Bekräftat. Utför åtgärden.</string>
+    <string name="tts_cancelled_action">Avbrutet. Åtgärden utfördes inte.</string>
+    <string name="tts_no_screen_data">Ingen skärmdata tillgänglig ännu.</string>
+    <string name="tts_navigated_back">Går tillbaka.</string>
+    <string name="tts_reading_headings_intro">Rubriker på skärmen:</string>
+    <!--
+      Note: the actual [maskerat fält] labels sent to the AI live in ScreenSnapshotSerializer,
+      not here - that text is part of the fixed protocol we send to Claude (see its docstring),
+      not device-locale-dependent UI copy, so it's intentionally not a string resource.
+    -->
+</resources>

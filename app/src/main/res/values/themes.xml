@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Klarl" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/klarl_primary</item>
+        <item name="colorPrimaryDark">@color/klarl_primary_dark</item>
+        <item name="colorAccent">@color/klarl_accent</item>
+        <item name="android:windowBackground">@color/klarl_background</item>
+        <item name="android:textColorPrimary">@color/klarl_on_background</item>
+    </style>
+</resources>
