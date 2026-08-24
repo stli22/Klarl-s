@@ -1,7 +1,7 @@
-# Klarl – AI-driven tillgänglighetsapp för Android (prototyp)
+# Klarläs – AI-driven tillgänglighetsapp för Android (prototyp)
 
 En prototyp av en Android-app som hjälper synskadade att navigera andra appar smartare än
-traditionella skärmläsare: istället för att läsa upp all text linjärt läser Klarl skärmens
+traditionella skärmläsare: istället för att läsa upp all text linjärt läser Klarläs skärmens
 struktur, ber Claude sammanfatta den, och låter användaren navigera med röstkommandon och
 följdfrågor. Se `SPEC.md`-innehållet (kravspecifikationen) i uppgiftsbeskrivningen för den
 fullständiga bakgrunden – det här dokumentet beskriver vad som byggts och hur man kör det.
@@ -38,9 +38,9 @@ en dator med Android Studio/SDK innan ni litar på det i fält.
    - `CLAUDE_API_KEY` – din Claude API-nyckel (https://console.anthropic.com/settings/keys)
    - `CLAUDE_MODEL` – valfritt, standard är `claude-opus-5`
 3. Bygg och installera appen på en enhet eller emulator (minSdk 26 / Android 8.0+).
-4. Starta appen, tryck **"Öppna tillgänglighetsinställningar"** och aktivera *Klarl skärmguide*.
+4. Starta appen, tryck **"Öppna tillgänglighetsinställningar"** och aktivera *Klarläs skärmguide*.
 5. Ge appen mikrofonbehörighet via **"Ge mikrofonbehörighet"**.
-6. Växla till valfri annan app – Klarl bör läsa upp en kort sammanfattning inom några sekunder
+6. Växla till valfri annan app – Klarläs bör läsa upp en kort sammanfattning inom några sekunder
    och sedan lyssna efter ett kommando.
 
 `local.properties` är gitignorad och checkas aldrig in.

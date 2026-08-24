@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Klarl</string>
-    <string name="accessibility_service_label">Klarl skärmguide</string>
+    <string name="app_name">Klarläs</string>
+    <string name="accessibility_service_label">Klarläs skärmguide</string>
     <string name="accessibility_service_description">Läser upp och sammanfattar skärmar i andra appar med hjälp av AI, och låter dig navigera med röstkommandon. Ett komplement till TalkBack, inte en ersättning.</string>
 
     <!-- MainActivity / status screen -->
-    <string name="status_title">Klarl – status</string>
+    <string name="status_title">Klarläs – status</string>
     <string name="status_service_enabled">Tillgänglighetstjänsten är aktiverad</string>
     <string name="status_service_disabled">Tillgänglighetstjänsten är inte aktiverad</string>
-    <string name="status_service_explanation">Klarl behöver aktiveras som tillgänglighetstjänst för att kunna läsa skärminnehåll i andra appar.</string>
+    <string name="status_service_explanation">Klarläs behöver aktiveras som tillgänglighetstjänst för att kunna läsa skärminnehåll i andra appar.</string>
     <string name="action_open_accessibility_settings">Öppna tillgänglighetsinställningar</string>
     <string name="status_mic_permission_granted">Mikrofonbehörighet beviljad</string>
     <string name="status_mic_permission_missing">Mikrofonbehörighet saknas</string>

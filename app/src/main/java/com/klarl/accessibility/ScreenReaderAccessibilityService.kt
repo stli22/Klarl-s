@@ -70,7 +70,7 @@ class ScreenReaderAccessibilityService : AccessibilityService() {
         confirmationManager = ConfirmationManager(this, speechOutput, speechInput)
         actionExecutor = ScreenActionExecutor(this)
         settingsStore = SettingsStore(this)
-        Log.i(TAG, "Klarl skärmguide ansluten")
+        Log.i(TAG, "Klarläs skärmguide ansluten")
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
