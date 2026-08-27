@@ -99,6 +99,7 @@ class ClaudeApiClient(
             put(
                 "output_config",
                 JSONObject().apply {
+                    put("effort", ClaudeConfig.EFFORT)
                     put(
                         "format",
                         JSONObject().apply {
@@ -131,10 +132,21 @@ class ClaudeApiClient(
                 throw IOException("Claude API-fel: $message")
             }
 
-            // output_config.format guarantees the first content block is text containing valid JSON.
-            val textBlock = responseJson.getJSONArray("content")
+            // output_config.format guarantees a text block *if Claude gets to write one* - but
+            // adaptive thinking spends output tokens before the text block, so a too-tight
+            // max_tokens can hit stop_reason=max_tokens with only a thinking block and no text
+            // at all. Surface that case with a clear message instead of a bare "no such element".
+            val contentBlocks = responseJson.getJSONArray("content")
                 .let { arr -> (0 until arr.length()).map { arr.getJSONObject(it) } }
-                .first { it.optString("type") == "text" }
+            val textBlock = contentBlocks.firstOrNull { it.optString("type") == "text" }
+            if (textBlock == null) {
+                val stopReason = responseJson.optString("stop_reason", "okänd")
+                throw IOException(
+                    "Inget textsvar från Claude (stop_reason=$stopReason) - troligen tog " +
+                        "'thinking' hela max_tokens-budgeten. Höj ClaudeConfig.MAX_TOKENS " +
+                        "eller sänk ClaudeConfig.EFFORT."
+                )
+            }
 
             JSONObject(textBlock.getString("text"))
         }

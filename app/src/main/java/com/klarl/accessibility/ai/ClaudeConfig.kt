@@ -19,9 +19,22 @@ object ClaudeConfig {
     val model: String get() = BuildConfig.CLAUDE_MODEL
     val isConfigured: Boolean get() = apiKey.isNotBlank()
 
-    /** Screen summaries and command interpretation are both short, so this is generous headroom. */
-    const val MAX_TOKENS = 1024L
+    /**
+     * Screen summaries and command interpretation are both short *answers*, but Claude Opus 5
+     * runs adaptive thinking by default, which spends output tokens on reasoning before it
+     * writes the actual text - a low max_tokens can be entirely consumed by thinking, leaving
+     * stop_reason=max_tokens and no text block at all (see ClaudeApiClient's handling of that).
+     * 2048 leaves headroom for thinking + a still-short structured JSON answer.
+     */
+    const val MAX_TOKENS = 2048L
+
+    /**
+     * These are simple, schema-constrained tasks (a short summary, or picking one of a handful
+     * of enum actions) - "low" effort keeps Claude's adaptive thinking brief, which both avoids
+     * the max_tokens problem above and keeps latency down for the ~3s narration target.
+     */
+    const val EFFORT = "low"
 
     const val CONNECT_TIMEOUT_SECONDS = 5L
-    const val READ_TIMEOUT_SECONDS = 8L
+    const val READ_TIMEOUT_SECONDS = 15L
 }
