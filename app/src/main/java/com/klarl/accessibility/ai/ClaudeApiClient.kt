@@ -48,9 +48,11 @@ class ClaudeApiClient(
         return execute(body).mapCatching { json ->
             ScreenSummary(
                 summaryText = json.getString("summary"),
+                // The schema can't enforce "2 to 4 items" (see ClaudePromptBuilder) - only the
+                // prompt asks for it - so clamp defensively in case Claude sends more.
                 options = json.getJSONArray("options").let { arr ->
                     (0 until arr.length()).map { NavigationOption(arr.getString(it)) }
-                }
+                }.take(4)
             )
         }
     }

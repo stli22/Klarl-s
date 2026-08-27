@@ -31,13 +31,15 @@ object ClaudePromptBuilder {
             "properties",
             JSONObject().apply {
                 put("summary", JSONObject().apply { put("type", "string") })
+                // Claude's structured-output schemas only support minItems/maxItems of 0 or 1
+                // (an API validation error otherwise) - the "2 to 4" requirement instead lives
+                // in the system prompt above, with a defensive take(4) on the parsed result in
+                // ClaudeApiClient in case Claude doesn't follow it exactly.
                 put(
                     "options",
                     JSONObject().apply {
                         put("type", "array")
                         put("items", JSONObject().apply { put("type", "string") })
-                        put("minItems", 2)
-                        put("maxItems", 4)
                     }
                 )
             }
